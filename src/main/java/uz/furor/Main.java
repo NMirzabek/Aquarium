@@ -17,8 +17,9 @@ public class Main {
         int maleCount = 1 + rand.nextInt(3);
         int femaleCount = 1 + rand.nextInt(3);
 
-        System.out.printf("Boshlang'ich baliqlar: %d erkak, %d urg'ochi%n",
-                maleCount, femaleCount);
+        System.out.println(
+                "Boshlang'ich baliqlar: " + maleCount + " erkak, " + femaleCount + " urg'ochi"
+        );
 
         List<Fish> initialFish = new ArrayList<>();
 

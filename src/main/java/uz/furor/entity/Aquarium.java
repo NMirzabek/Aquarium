@@ -30,9 +30,8 @@ public class Aquarium {
             }
         }
         if (partner == null) {
-            System.out.printf(
-                    "[KO'PAYISH] Baliq #%d (%s) juft topa olmadi.%n",
-                    fish.getId(), fish.getGender()
+            System.out.println(
+                    "[KO'PAYISH] Baliq #" + fish.getId() + " (" + fish.getGender() + ") juft topa olmadi."
             );
             return;
         }
@@ -46,11 +45,11 @@ public class Aquarium {
         int life = 3000 + rand.nextInt(7000);
         Fish baby = new Fish(this, newGender, life);
         baby.start();
-        System.out.printf(
-                "[KO'PAYISH] Baliq #%d (%s) va baliq #%d (%s) ko'paydi: yangi baliq #%d (%s) yaratildi, umr = %d ms.%n",
-                fish.getId(), fish.getGender(),
-                partner.getId(), partner.getGender(),
-                baby.getId(), newGender, life
+        System.out.println(
+                "[KO'PAYISH] Baliq #" + fish.getId() + " (" + fish.getGender() + ")" +
+                " va baliq #" + partner.getId() + " (" + partner.getGender() + ")" +
+                " ko'paydi: yangi baliq #" + baby.getId() + " (" + newGender + ")" +
+                " yaratildi, umr = " + life + " ms."
         );
     }
 }

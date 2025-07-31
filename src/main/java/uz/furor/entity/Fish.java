@@ -39,9 +39,8 @@ public class Fish implements Runnable {
 
     @Override
     public void run() {
-        System.out.printf(
-                "[TUG'ILISH] Baliq #%d (%s) yaratildi, umr davomiyligi: %d ms%n",
-                id, gender, lifeSpan
+        System.out.println(
+                "[TUG'ILISH] Baliq #" + id + " (" + gender + ") yaratildi, umr davomiyligi: " + lifeSpan + " ms"
         );
         aquarium.addFish(this);
         try {
@@ -51,9 +50,8 @@ public class Fish implements Runnable {
         } catch (InterruptedException ignored) {
         } finally {
             aquarium.removeFish(this);
-            System.out.printf(
-                    "[O'LIM] Baliq #%d (%s) vafot etdi.%n",
-                    id, gender
+            System.out.println(
+                    "[O'LIM] Baliq #" + id + " (" + gender + ") vafot etdi."
             );
         }
     }
